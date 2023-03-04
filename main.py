@@ -54,7 +54,8 @@ def greet():
     """
     if request.method == "POST":
         name = request.form["name"]
-        return "Hello " + name
+        greeting = "Hello " + name
+        return render_template("response.html", greeting=greeting)
     return render_template("hello.html")
 
 
